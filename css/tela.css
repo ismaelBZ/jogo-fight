@@ -6,14 +6,16 @@ h1{
 }
 #cenario{
    
-    width: 65%;
+    width: 200;
     position: relative;
-    left: 250px; /*movendo para direita -->*/
+    left: 390px; /*movendo para direita -->*/
     /* transform: scale(0.8) */
 }
 
 
-img{
+#imagem{
+  height: 60vh;  /*encolhendo*/
+  width: 100vh; /*esticando*/
   border-color: navajowhite;
 }
 
@@ -26,15 +28,4 @@ img{
   margin: 0.2rem 0.3rem;
 }
 
-input{
-  margin: auto;
-  width: 150px; /*largura para direita e esquerda*/
-  height: 35px; /* largura pra baixo e pracima*/
-  left: 250px; /*movendo para direita -->*/
-  margin-left: 5px;
-  margin-top: 25px;
-  border-radius: 15px;
-  border-color: navajowhite;
-  background-color: white;
-  font-size: 18px ;
-}
+
