@@ -1,32 +1,55 @@
-h1{
+h1 {
   margin-top: 25px; /*afastando de cima para baixo*/
-   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- 
-}
-#cenario{
-   
-    width: 200;
-    position: relative;
-    left: 390px; /*movendo para direita -->*/
-    /* transform: scale(0.8) */
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.tamanho-de-tela {
+  width: 100%;
+  max-width: 90vw;
+  height: 85vh; /* Foi um tamanho que cabe na tela do not */
+  margin: 0 auto;
+}
 
-#imagem{
-  height: 60vh;  /*encolhendo*/
-  width: 100vh; /*esticando*/
-  border-color: navajowhite;
+.cenario {
+  width: 100%; /* Ocupa todo o tamanho da tela */
+  height: 100%;
+  overflow: hidden;
+
+  /** CENARIO **/
+  background: url(../imagens/sans-titre-1_tpwa.jpg) bottom left no-repeat;
+  background-size: 100%;
+  object-fit: contain;
+  z-index: -1;
+  position: relative; /* Para os personagens se movimentarem de acordo com o cenário */
+}
+
+.personagem-esquerda {
+  width: 50px;
+  height: 100px;
+  background-color: #0f0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* left: calc(100% - 50px); */
+}
+
+.personagem-direita {
+  width: 50px;
+  height: 100px;
+  background-color: #00f;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* rigt: calc(100% - 50px); */
 }
 
 .botoes {
   width: fit-content;
   margin: 0 auto;
-  padding: 35px;
+  padding: 20px 35px 35px;
 }
 
 .botoes button {
   margin: 0.2rem 0.3rem;
 }
-
-
