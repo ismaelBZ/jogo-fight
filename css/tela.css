@@ -5,9 +5,9 @@ h1 {
 }
 
 .tamanho-de-tela {
-  width: 100%;
-  max-width: 90vw;
-  height: 85vh; /* Foi um tamanho que cabe na tela do not */
+  width: 90%;
+  max-width: 190vw;
+  height: 82vh; /* Foi um tamanho que cabe na tela do not */
   margin: 0 auto;
 }
 
@@ -25,21 +25,21 @@ h1 {
 }
 
 .personagem-esquerda {
-  width: 50px;
-  height: 100px;
+  width: 100px;
+  height: 300px;
   background-color: #0f0;
   position: absolute;
-  bottom: 0;
+  bottom: 35px;
   left: 0;
   /* left: calc(100% - 50px); */
 }
 
 .personagem-direita {
-  width: 50px;
-  height: 100px;
+  width: 100px;
+  height: 300px;
   background-color: #00f;
   position: absolute;
-  bottom: 0;
+  bottom: 35px;
   right: 0;
   /* rigt: calc(100% - 50px); */
 }
@@ -47,7 +47,7 @@ h1 {
 .botoes {
   width: fit-content;
   margin: 0 auto;
-  padding: 20px 35px 35px;
+  padding: 20px 35px 25px;
 }
 
 .botoes button {
