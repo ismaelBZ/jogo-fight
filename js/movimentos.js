@@ -12,11 +12,11 @@ let tempoDeAceleracao = 1000;
 
 // Movimentação
 let velocidade = 10;
-let aceleracao = 1;
+let aceleracao = 2;
 let aceleraçãoDaGravidade = 9.8;
 
 // Funcionalidade
-let stop = true;
+let stop = true
 
 
 const personagemEsquerda = document.getElementById("personagem-esquerda");
@@ -31,29 +31,34 @@ const setaParaCima = 38;
 const setaParaBaixo = 38;
 
 function movimentarPersonagem(event) {
-  
-  aceleracao = 1
-  
+
+  velocidade += aceleracao;
+
   if (event.keyCode == setaParaDireita) {
-    setInterval(() => {
-      aceleracao += 0.5;
-      posicaoDoPersonagem += velocidade * aceleracao;
-    }, tempoDeAceleracao);
+    posicaoDoPersonagem += velocidade;
   } else if ((event.keyCode = setaParaEsquerda)) {
-    setInterval(() => {
-      aceleracao += 0.5;
-      posicaoDoPersonagem -= velocidade * aceleracao;
-    }, tempoDeAceleracao)
+    posicaoDoPersonagem -= velocidade;
   }
 
   personagemEsquerda.style.left = `${posicaoDoPersonagem}px`;
   
-  setInterval(() => console.log(posicaoDoPersonagem), 3000)
+  console.log(velocidade);
   
 }
+
+function pararPersonagem() {
+
+  velocidade = 10;
+  aceleracao = 1;
+  console.log(velocidade);
+
+};
   
 
 document.onkeydown = movimentarPersonagem;
+document.onkeyup = pararPersonagem;
+
 /** document.onkeyUp colocar uma variavel aqui para parar de executar a função setInterval
  * por exemplo let stop = true -- onkeydown stop = true if (stop) execute setINterval else break
  * onkeyup stop = false
+ **/
